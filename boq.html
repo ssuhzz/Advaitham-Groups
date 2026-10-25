@@ -30,7 +30,7 @@
   <div class="wrap">
     <p class="eyebrow">BOQ builder</p>
     <h1 class="ph">Build your <span class="hl">BOQ.</span></h1>
-    <p class="ph-p">Choose a package, plot size and floors to see where the cost goes, from steel and cement to electrical. Quantities follow standard thumb-rules for RCC-framed homes, and the package total is split across categories by typical material and labour weightage. A drawing-accurate BOQ follows your site visit.</p>
+    <p class="ph-p">Every line of our reference bill of quantities, from site establishment to contingency. Quantities scale with your built-up area, and amounts scale with your package rate, so the grand total is area × per-sqft rate.</p>
     <div class="boq-ctl" style="margin-top:1.8rem">
       <fieldset class="full"><legend class="field-l">Package</legend><div class="chips" id="pkg-chips"></div></fieldset>
       <div>
@@ -48,9 +48,9 @@
     </div>
     <div id="boq-cats"></div>
     <div class="bq-total" id="boq-total"></div>
-    <p class="boq-note">The grand total covers materials, labour and project management. It excludes GST, permits and approvals, architect fees for new drawings, and interiors, which are priced separately. Steel is estimated at about 4.2 kg per sqft. Concrete is supplied ready-mixed, so cement appears under masonry and plaster only. This is a planning-stage estimate.</p>
+    <p class="boq-note">How this is calculated: quantities follow industry-standard thumb-rules for RCC-framed residential construction, about 4 to 4.4 kg of steel and about 0.4 bags of cement per sqft, depending on ceiling height. The reference sheet is 2,800 sqft at the Essential rate of ₹1,999/sqft, totalling ₹55,98,024. The grand total covers materials, labour and project management. It excludes GST, permits and approvals, architect fees for fresh drawings, and interiors. This is a planning-stage estimate. A drawing-accurate BOQ is provided free within 5 days of your site visit, with no obligation.</p>
     <div class="est-actions">
-      <a class="btn btn-primary" id="boq-wa" href="https://wa.me/917022250878" target="_blank" rel="noopener">Send this BOQ to our team</a>
+      <a class="btn btn-primary" id="boq-wa" href="https://wa.me/917892658981" target="_blank" rel="noopener">Send this BOQ to our team</a>
       <button class="btn btn-ghost" id="boq-copy" type="button">Copy BOQ</button>
       <a class="btn btn-ghost" href="plans.html">Compare plans</a>
     </div>
@@ -60,7 +60,7 @@
 <footer class="foot">
   <div class="wrap foot-in">
     <a href="index.html#top" aria-label="Advaitham Groups, back to top"><span class="lg lg-full" role="img" aria-label="Advaitham Groups. Construction, Design, Interior, Land Developers"><i class="k"></i><i class="b"></i></span></a>
-    <address>100Ft Road, Off Kanakapura Main Road,<br>Banashankari 6th Stage, Lingadheeranahalli,<br>Bengaluru-560109.<br>+91 70222 50878</address>
+    <address>100Ft Road, Off Kanakapura Main Road,<br>Banashankari 6th Stage, Lingadheeranahalli,<br>Bengaluru-560109.<br>+91 7892658981</address>
     <nav aria-label="Footer">
       <a href="index.html#services">Services</a><a href="plans.html">Plans</a><a href="boq.html">BOQ</a><a href="index.html#estimate">Estimator</a><a href="index.html#process">Process</a><a href="index.html#team">Team</a><a href="index.html#work">Work</a><a href="index.html#contact">Contact</a>
     </nav>
@@ -68,7 +68,7 @@
   </div>
 </footer>
 
-<a class="wa" href="https://wa.me/917022250878?text=Hi%20Advaitham%20Groups%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with Advaitham Groups on WhatsApp">
+<a class="wa" href="https://wa.me/917892658981?text=Hi%20Advaitham%20Groups%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with Advaitham Groups on WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/></svg><span>WhatsApp</span>
 </a>
 <script src="site.js"></script>
@@ -76,7 +76,7 @@
 var A=ADV,$=A.$,$$=A.$$,inr=A.inr,waLink=A.waLink,copyText=A.copyText,STAGES=A.STAGES,PLANS=A.PLANS,ORDER=A.ORDER;
 
 var q=new URLSearchParams(location.search);
-var S=A.clean(q.has('pkg')?{pkg:q.get('pkg'),plot:q.get('plot'),floors:q.get('floors'),type:q.get('type')}:A.load());
+var S=A.clean(q.has('pkg')?{pkg:q.get('pkg'),plot:q.get('plot'),floors:q.get('floors'),type:q.get('type')}:{plot:1400,floors:2,type:'new',pkg:'essential'});
 var boqText='';
 function buildFloors(){
   if(S.type==='ext'&&S.floors>4)S.floors=4;
@@ -86,20 +86,18 @@ function buildFloors(){
 function render(){
   var d=A.boqData(S),c=d.c,openSet=$$('#boq-cats details').map(function(e){return e.open});
   $('#plot-v').textContent=inr(S.plot)+' sqft';
-  $('#boq-sum').innerHTML=[['Package',c.pkg],['Built-up area',inr(c.area)+' sqft'],['Floors',A.floorLabel(S)],['Estimated total','₹'+inr(d.total)]].map(function(r){return '<div><div class="l">'+r[0]+'</div><div class="v">'+r[1]+'</div></div>'}).join('');
+  $('#boq-sum').innerHTML=[['Package',c.pkg],['Built-up area',inr(c.area)+' sqft'],['Floors',A.floorLabel(S)],['Grand total','₹'+inr(d.total)]].map(function(r){return '<div><div class="l">'+r[0]+'</div><div class="v">'+r[1]+'</div></div>'}).join('');
   $('#boq-cats').innerHTML=d.cats.map(function(k,i){
     var rows=k.items.map(function(it){
-      var r=it.rate>=100?inr(it.rate):it.rate.toFixed(2);
-      return '<tr><td>'+it.n+'</td><td class="r">'+A.qfmt(it.q,it.u)+'</td><td>'+it.u+'</td><td class="r">'+r+'</td><td class="r">'+inr(it.amt)+'</td></tr>';
+      return '<tr><td>'+it.n+'<small>'+it.d+'</small></td><td class="r">'+A.qfmt(it.q,it.u)+'</td><td>'+it.u+'</td><td class="r">'+inr(Math.round(it.rate))+'</td><td class="r">'+inr(it.amt)+'</td></tr>';
     }).join('');
-    var isOpen=openSet.length?openSet[i]:i===1;
-    return '<details class="bq-cat"'+(isOpen?' open':'')+'><summary><span class="bq-n">'+k.n+'</span><span class="bq-share">'+k.w+'% of total</span><span class="bq-sub">₹'+inr(k.sub)+'</span></summary><div class="tbl"><table class="bq-t"><thead><tr><th>Item</th><th class="r">Qty</th><th>Unit</th><th class="r">Rate (₹)</th><th class="r">Amount (₹)</th></tr></thead><tbody>'+rows+'</tbody></table></div></details>';
+    var isOpen=openSet.length?openSet[i]:i===0;
+    return '<details class="bq-cat"'+(isOpen?' open':'')+'><summary><span class="bq-n"><span class="bq-l">'+k.L+'</span>'+k.n+'</span><span class="bq-share">'+k.pct+'% of total</span><span class="bq-sub">₹'+inr(k.sub)+'</span></summary><div class="tbl"><table class="bq-t"><thead><tr><th>Item</th><th class="r">Qty</th><th>Unit</th><th class="r">Rate (₹)</th><th class="r">Amount (₹)</th></tr></thead><tbody>'+rows+'</tbody></table></div></details>';
   }).join('');
   $('#boq-total').innerHTML='<span>Grand total, '+c.pkg+' package</span><b>₹'+inr(d.total)+'</b>';
-  var lines=['Hi Advaitham Groups, here is the BOQ I generated on your site.',A.floorLabel(S)+', '+inr(c.area)+' sqft total, '+c.pkg+' package'].concat(d.cats.map(function(k){return k.n+': ₹'+inr(k.sub)}),['Grand total: ₹'+inr(d.total),'I would like to discuss this.']);
+  var lines=['Hi Advaitham Groups, here is the BOQ I generated on your site.',A.floorLabel(S)+', '+inr(c.area)+' sqft total, '+c.pkg+' package'].concat(d.cats.map(function(k){return k.L+'. '+k.n+': ₹'+inr(k.sub)}),['Grand total: ₹'+inr(d.total),'I would like to discuss this.']);
   boqText=lines.join('\n');
   $('#boq-wa').href=waLink(boqText);
-  A.save(S);
 }
 var plot=$('#plot');plot.value=S.plot;
 buildFloors();

@@ -5,7 +5,7 @@ var A=window.ADV={};
 function $(s,r){return (r||document).querySelector(s)}
 function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
 A.$=$;A.$$=$$;
-A.WA='917022250878';
+A.WA='917892658981';
 A.waLink=function(msg){return 'https://wa.me/'+A.WA+'?text='+encodeURIComponent(msg)};
 A.inr=function(n){return Math.round(n).toLocaleString('en-IN')};
 A.money=function(v){var L=v/1e5;return L>=100?'₹'+(v/1e7).toFixed(2)+' Cr':'₹'+Math.round(L)+' L'};
@@ -27,24 +27,24 @@ A.PRICED=['essential','classic','premium','luxury'];
 A.PLANS={
   essential:{no:'01',name:'Essential',rate:1999,
     blurb:'Solid construction with reliable materials. Everything you need, nothing unnecessary.',
-    hl:['Sunvik / A-One TMT steel + Ultratech / ACC / Birla cement','Vitrified flooring up to ₹70/sqft','10ft ceilings with 6" & 4" solid blocks','Architectural drawings included, 1 design option'],
-    steel:'Sunvik / A-One TMT',cement:'Ultratech / ACC / Birla',ceiling:'10 ft',drawings:'1 design option',interiors:'Not included',floor:'Vitrified tiles, up to ₹70/sqft'},
+    hl:['Sunvik / A-One TMT steel + Ultratech / ACC / Birla cement','Concrete grade as per structural engineer recommendation','6" & 4" standard solid blocks, 10ft ceiling','Ceramic wall dado, SS sink, granite counter up to ₹140/sqft','Vitrified flooring up to ₹70/sqft','Basic UPVC windows at ₹400/sqft, laminate doors','Asian Paints Tractor emulsion + Apex exterior','Finolex FR wiring, basic switches (Lisha / GM)','2000L overhead tank, 7000L underground tank','SS pipe railings, MS gate up to ₹550/sqft','Architectural drawings included, 1 design option by our architect'],
+    cmp:{steel:'Sunvik / A-One TMT',cement:'Ultratech / ACC / Birla',masonry:'6" & 4" standard solid blocks',ceiling:'10 ft',flooring:'Vitrified, up to ₹70/sqft',kitchen:'Ceramic wall dado, SS sink, granite counter up to ₹140/sqft',windows:'Basic UPVC, ₹400/sqft',doors:'Laminate doors',paint:'Asian Paints Tractor emulsion + Apex exterior',electrical:'Finolex FR wiring, basic switches (Lisha / GM)',sanitary:'—',railings:'SS pipe railings, MS gate up to ₹550/sqft',tanks:'2000L overhead tank, 7000L underground tank',lighting:'—',drawings:'1 design option by our architect',interiors:'Not included'}},
   classic:{no:'02',name:'Classic',rate:2399,
     blurb:'Upgraded brands and finishes. A meaningful step up in quality and durability.',
-    hl:['Indus TMT steel + Ultratech / ACC / Birla cement','Granite flooring up to ₹130/sqft','Quartz counter up to ₹550/sqft','Architectural drawings included, 1 design option'],
-    steel:'Indus TMT',cement:'Ultratech / ACC / Birla',ceiling:'10 ft',drawings:'1 design option',interiors:'Not included',floor:'Granite flooring, up to ₹130/sqft'},
+    hl:['Indus TMT steel + Ultratech / ACC / Birla cement','Concrete grade as per structural engineer recommendation','AVS / Delta blocks (6" & 4"), 10ft ceiling','Ceramic dado, FRPA sink, quartz counter up to ₹550/sqft','Granite flooring up to ₹130/sqft','Classic UPVC windows at ₹850/sqft, membrane doors up to ₹9,000','Asian Paints Tractor + Apex exterior','Finolex / Havells wiring, mid-variant switches, UPS provision','Parryware / Jaquar sanitary fittings up to ₹50,000','SS pipe railings, MS gate','Architectural drawings included, 1 design option by our architect'],
+    cmp:{steel:'Indus TMT',cement:'Ultratech / ACC / Birla',masonry:'AVS / Delta blocks (6" & 4")',ceiling:'10 ft',flooring:'Granite, up to ₹130/sqft',kitchen:'Ceramic dado, FRPA sink, quartz counter up to ₹550/sqft',windows:'Classic UPVC, ₹850/sqft',doors:'Membrane doors, up to ₹9,000',paint:'Asian Paints Tractor + Apex exterior',electrical:'Finolex / Havells wiring, mid-variant switches, UPS provision',sanitary:'Parryware / Jaquar fittings up to ₹50,000',railings:'SS pipe railings, MS gate',tanks:'—',lighting:'—',drawings:'1 design option by our architect',interiors:'Not included'}},
   premium:{no:'03',name:'Premium',rate:2799,
     blurb:'JSW Neo / Tata steel, 11ft ceilings, Legrand switches, SS glass railings. No compromises.',
-    hl:['JSW Neo / Tata TMT steel, 11ft ceiling height','Granite / Smart Marble flooring up to ₹170/sqft','Asian Paints Premium emulsion, SS glass railings','Architectural drawings, 2 options, you choose'],
-    steel:'JSW Neo / Tata TMT',cement:'Ultratech / ACC / Birla',ceiling:'11 ft',drawings:'2 options, you choose',interiors:'Not included',floor:'Granite / Smart Marble, up to ₹170/sqft'},
+    hl:['JSW Neo / Tata TMT steel + Ultratech / ACC / Birla cement','11ft ceiling height, elevated proportions throughout','Alpha / Delta + AAC block combination (6" & 4")','FRPA / Futura sink, quartz counter up to ₹650/sqft','Granite / Smart Marble flooring up to ₹170/sqft','UPVC windows with mesh at ₹850/sqft, membrane doors','Asian Paints Premium emulsion + Apex exterior','Finolex / Havells wiring, Legrand / Havells glass switches','Parryware / Jaquar fittings up to ₹70,000','SS glass railings at ₹1,300/rft, sliding gate','Architectural drawings, 2 options from different architects, you choose'],
+    cmp:{steel:'JSW Neo / Tata TMT',cement:'Ultratech / ACC / Birla',masonry:'Alpha / Delta + AAC block combination (6" & 4")',ceiling:'11 ft, elevated proportions throughout',flooring:'Granite / Smart Marble, up to ₹170/sqft',kitchen:'FRPA / Futura sink, quartz counter up to ₹650/sqft',windows:'UPVC with mesh, ₹850/sqft',doors:'Membrane doors',paint:'Asian Paints Premium emulsion + Apex exterior',electrical:'Finolex / Havells wiring, Legrand / Havells glass switches',sanitary:'Parryware / Jaquar fittings up to ₹70,000',railings:'SS glass railings at ₹1,300/rft, sliding gate',tanks:'—',lighting:'—',drawings:'2 options from different architects, you choose',interiors:'Not included'}},
   luxury:{no:'04',name:'Luxury Royale',rate:3399,
-    blurb:'Full luxury, with basic interiors included. Modular kitchen, wardrobes and home automation come standard.',
-    hl:['Complete acrylic modular kitchen included','Full house lighting automation','Burma teak main door, Grohe / Toto fittings','Architectural drawings, 3 options, you choose'],
-    steel:'JSW Neo / Tata TMT',cement:'Ultratech',ceiling:'11 ft',drawings:'3 options, you choose',interiors:'Basic interiors: modular kitchen, wardrobes, home automation',floor:'Premium flooring'},
+    blurb:'Full luxury, with basic interiors included. Modular kitchen, wardrobes and home automation come standard, not an add-on quote later.',
+    hl:['JSW Neo / Tata TMT + Ultratech cement, 11ft ceiling','Laterite / granite stone cladding on elevation','Complete acrylic modular kitchen included','Grohe / Toto sanitary fittings up to ₹1,00,000','Burma teak main door, CNC carving, PU polish','Asian Paints Royal emulsion + Royal Play 2 walls / 1000 sqft','Full house lighting automation included','Automated sliding gate, FR-LSH wiring','Legrand Myrius switches, smart home provision','2 wardrobes + 1 TV cabinet per 1000 sqft included','Basic interiors package included: modular kitchen + wardrobes done, no separate interiors quote needed to move in','Architectural drawings, 3 options from our best architects, you choose'],
+    cmp:{steel:'JSW Neo / Tata TMT',cement:'Ultratech',masonry:'Laterite / granite stone cladding on elevation',ceiling:'11 ft',flooring:'—',kitchen:'Complete acrylic modular kitchen included',windows:'—',doors:'Burma teak main door, CNC carving, PU polish',paint:'Asian Paints Royal emulsion + Royal Play 2 walls / 1000 sqft',electrical:'Legrand Myrius switches, FR-LSH wiring, smart home provision',sanitary:'Grohe / Toto fittings up to ₹1,00,000',railings:'Automated sliding gate',tanks:'—',lighting:'Full house lighting automation',drawings:'3 options from our best architects, you choose',interiors:'Basic interiors: modular kitchen, wardrobes done, no separate interiors quote needed to move in. 2 wardrobes + 1 TV cabinet per 1000 sqft'}},
   custom:{no:'05',name:'Custom',rate:null,from:1800,
-    blurb:'For budget-first builds or non-standard specs we cannot box into a fixed tier. We scope this one plot by plot, and the final price is set after your site visit and BOQ.',
-    hl:['Starting from ₹1,800/sqft, final price set after site visit and BOQ','Structural grade set by our structural engineer, standard-grade finishes','Choose material brands from our vetted vendor list within your budget','Same milestone payments and weekly reports as every package'],
-    steel:'As scoped',cement:'As scoped',ceiling:'As designed',drawings:'Scoped with you',interiors:'As scoped'}
+    blurb:'For budget-first builds or non-standard specs we cannot box into a fixed tier. We scope this one plot by plot, and final pricing is set after your site visit and BOQ, not before.',
+    hl:['Starting from ₹1,800/sqft, final price fixed after site visit and BOQ, not before','Structural grade set by our structural engineer, standard-grade finishes','Choose material brands from our vetted vendor list within your budget','Same live cameras, milestone payments and weekly reports as every package, no exceptions','Best for: budget-conscious builds, rental units, outbuildings, or unusual site conditions','Architectural drawings included, 1 design option by our architect'],
+    cmp:{steel:'As scoped by structural engineer',cement:'As scoped',masonry:'As you choose',ceiling:'As designed',flooring:'As you choose',kitchen:'As you choose',windows:'As you choose',doors:'As you choose',paint:'As you choose',electrical:'As you choose',sanitary:'As you choose',railings:'As you choose',tanks:'As you choose',lighting:'As you choose',drawings:'1 design option by our architect',interiors:'As scoped'}}
 };
 A.perThousand=function(k){var p=A.PLANS[k];return (p.rate||p.from)*1000};
 
@@ -93,43 +93,70 @@ A.floorItems=function(S){
 };
 
 /* ---------- BOQ ---------- */
-/* [item, unit, quantity function, share of the category]. Category shares add up to 100. */
-A.CATS=[
- {n:'Excavation and foundation',w:9,it:[['Earthwork excavation and backfill','cum',function(x){return x.p*1.1},.30],['PCC bed concrete','cum',function(x){return x.p*.10},.20],['Footing and plinth concrete, M25','cum',function(x){return x.p*.22},.30],['Anti-termite treatment','sqft',function(x){return x.p},.05],['Foundation labour and shuttering','sqft',function(x){return x.p},.15]]},
- {n:'RCC structure',w:28,it:[['Ready-mix concrete, M25','cum',function(x){return x.a*.048},.33],[function(k){return 'TMT steel, Fe550 ('+A.PLANS[k].steel+')'},'kg',function(x){return x.a*4.2},.34],['Shuttering and centering','sqft',function(x){return x.a*2.2},.17],['RCC labour','sqft',function(x){return x.a},.16]]},
- {n:'Blockwork and masonry',w:10,it:[['Solid blocks, 6 in','nos',function(x){return x.a*3.2},.36],['Solid blocks, 4 in','nos',function(x){return x.a*1.1},.14],[function(k){return 'Cement for masonry ('+A.PLANS[k].cement+')'},'bags',function(x){return x.a*.10},.14],['Sand for masonry','cft',function(x){return x.a*.9},.10],['Masonry labour','sqft',function(x){return x.a},.26]]},
- {n:'Plastering',w:8,it:[['Cement for plaster','bags',function(x){return x.a*.17},.22],['M-sand for plaster','cft',function(x){return x.a*1.4},.12],['Internal wall plastering','sqft',function(x){return x.a*2.6},.30],['External plastering','sqft',function(x){return x.a*.9},.16],['Ceiling plastering','sqft',function(x){return x.a*.95},.20]]},
- {n:'Flooring and tiling',w:11,it:[[function(k){return 'Floor finish, supply ('+A.PLANS[k].floor+')'},'sqft',function(x){return x.a*.95},.38],['Bathroom and kitchen wall tiles','sqft',function(x){return x.a*.45},.17],['Tile laying labour','sqft',function(x){return x.a*1.4},.22],['Granite counters and staircase','sqft',function(x){return x.a*.08},.13],['Skirting and thresholds','rft',function(x){return x.a*.55},.10]]},
- {n:'Doors and windows',w:8,it:[['Main entrance doors','nos',function(x){return x.f},.20],['Internal flush doors','nos',function(x){return x.f*3},.22],['Aluminium or UPVC windows','sqft',function(x){return x.a*.12},.38],['MS railing and window grills','rft',function(x){return x.a*.15},.20]]},
- {n:'Electrical',w:7,it:[['Concealed conduit and wiring','points',function(x){return x.a*.045},.46],['Modular switches and plates','nos',function(x){return x.a*.045},.22],['Distribution boards and MCBs','nos',function(x){return x.f*2},.16],['Earthing and meter connection','lot',function(){return 1},.16]]},
- {n:'Plumbing and sanitary',w:7,it:[['Water supply and drainage piping','rft',function(x){return x.a*.2},.40],['Sanitary ware','sets',function(x){return x.f*2},.28],['CP fittings','sets',function(x){return x.f*2},.20],['Overhead tank and connections','nos',function(){return 1},.12]]},
- {n:'Painting and finishing',w:6,it:[['Putty and primer','sqft',function(x){return x.a*4},.35],['Interior emulsion paint','sqft',function(x){return x.a*3.2},.40],['Exterior paint','sqft',function(x){return x.a*.9},.25]]},
- {n:'Waterproofing',w:3,it:[['Terrace waterproofing','sqft',function(x){return x.p},.45],['Bathroom and balcony waterproofing','sqft',function(x){return x.a*.12},.35],['Sump and tank waterproofing','lot',function(){return 1},.20]]},
- {n:'Project management and quality control',w:3,it:[['Project management and weekly reports','months',function(x){return x.w/4.3},.50],['Site engineer supervision','months',function(x){return x.w/4.3},.30],['Quality tests, cube tests and steel inspection','nos',function(x){return x.f*4},.20]]}
+/* Reference bill of quantities (A to M). Quantities scale with built-up area; each amount scales with area x package rate, relative to the reference. */
+A.REF={area:2800,rate:1999,total:5598024};
+/* [item, description, unit, quantity, amount] */
+A.SHEET=[
+ {n:'Preliminary & Site Establishment',items:[
+  ['Site mobilization, layout marking & soil test','Boundary layout, benchmarking, soil bearing test for foundation design','Lot',1,103284]]},
+ {n:'Earthwork & Foundation',items:[
+  ['Excavation for foundation & footings','Footprint-based earthwork · G+1 footprint','cum',180,154928],
+  ['PCC bed & foundation concrete','Grade as per structural engineer recommendation','cum',45,206588],
+  ['Foundation reinforcement steel','JSW Neo / Tata TMT','kg',3500,175583]]},
+ {n:'RCC Superstructure',items:[
+  ['TMT steel reinforcement — columns, beams & slabs','JSW Neo / Tata TMT + Ultratech / ACC / Birla cement','kg',8800,722989],
+  ['Cement — structural grade','Ultratech / ACC / Birla','bags',880,335673],
+  ['Concrete — columns, beams & slabs','Grade as per structural engineer recommendation · 11 ft ceiling','cum',80,516421]]},
+ {n:'Masonry',items:[
+  ['Blockwork — external & internal walls (8" & 4")','Alpha/Delta + AAC block combination','sqft (wall area)',3800,464779]]},
+ {n:'Plastering & Waterproofing',items:[
+  ['Internal + external plastering','11 ft ceiling height, both faces','sqft',5200,284031],
+  ['Waterproofing — terrace & wet areas','Terrace, bathrooms, balconies, sunken areas','sqft',800,103284]]},
+ {n:'Flooring & Tiling',items:[
+  ['Living, bedroom & common area flooring','Granite / Smart Marble flooring up to ₹170/sqft','sqft',1700,516421],
+  ['Kitchen counter','Quartz counter up to ₹550/sqft','rft',8,180747],
+  ['Bathroom dado & flooring','Ceramic wall dado, anti-skid floor tiles','sqft',240,103284]]},
+ {n:'Doors & Windows',items:[
+  ['Windows','UPVC windows with mesh ₹650/sqft','sqft',180,284031],
+  ['Doors — main & internal','Membrane doors','nos',11,165255]]},
+ {n:'Electrical',items:[
+  ['Wiring, points & switches','Finolex / Havells wiring, Legrand / Havells glass switches','points',29,258210]]},
+ {n:'Plumbing & Sanitary',items:[
+  ['Plumbing lines — CPVC / PVC','Water supply & drainage lines','points',17,103284],
+  ['Sanitaryware & CP fittings','Parryware / Jaguar fittings up to ₹70,000','bathroom sets',4,180747]]},
+ {n:'Painting',items:[
+  ['Interior + exterior painting','Asian Paints Premium emulsion + Apex exterior','sqft',6000,180747]]},
+ {n:'Railings & Gate',items:[
+  ['Railings — staircase, balcony & terrace','SS glass railings up to ₹1,300/rft','rft',120,180747],
+  ['Main gate','Sliding gate up to ₹800/sqft','Lot',1,92958]]},
+ {n:'Architectural Design & Project Management',items:[
+  ['Architectural drawings','2 options from different architects, you choose','Lot',1,129105]]},
+ {n:'Contingency & Site Overheads',items:[
+  ['Contingency, sundries & site transportation','Buffer for site conditions, wastage & minor variations','Lot',1,154928]]}
 ];
-A.qfmt=function(q,u){return u==='months'?(Math.round(q*10)/10).toFixed(1):A.inr(Math.max(1,Math.round(q)))};
 A.boqData=function(S){
-  var c=A.calc(S),x={a:c.area,p:S.plot,f:S.floors,w:c.weeks};
-  var cats=A.CATS.map(function(cat){
-    var items=cat.it.map(function(it){
-      var amt=Math.round(c.mid*cat.w/100*it[3]),q=it[2](x),name=typeof it[0]==='function'?it[0](S.pkg):it[0];
-      return {n:name,u:it[1],q:q,amt:amt,rate:q?amt/q:0};
+  var c=A.calc(S);
+  var T=A.REF.total*(c.area*A.PLANS[S.pkg].rate*(c.ext?1.1:1))/(A.REF.area*A.REF.rate);
+  var qs=c.area/A.REF.area;
+  var cats=A.SHEET.map(function(sec,i){
+    var items=sec.items.map(function(it){
+      var lot=it[2]==='Lot',q=lot?1:it[3]*qs,amt=Math.round(it[4]*T/A.REF.total);
+      return {n:it[0],d:it[1],u:it[2],q:q,amt:amt,rate:amt/q};
     });
-    return {n:cat.n,w:cat.w,items:items,sub:items.reduce(function(s,i){return s+i.amt},0)};
+    return {L:String.fromCharCode(65+i),n:sec.n,items:items,sub:items.reduce(function(t,x){return t+x.amt},0)};
   });
-  return {c:c,cats:cats,total:cats.reduce(function(s,k){return s+k.sub},0)};
+  var total=cats.reduce(function(t,k){return t+k.sub},0);
+  cats.forEach(function(k){k.pct=total?Math.round(k.sub/total*100):0});
+  return {c:c,cats:cats,total:total};
 };
 
+A.qfmt=function(q,u){return u==='months'?(Math.round(q*10)/10).toFixed(1):A.inr(Math.max(1,Math.round(q)))};
 /* ---------- compare table ---------- */
+A.CMP_ROWS=[['Steel','steel'],['Cement','cement'],['Masonry','masonry'],['Ceiling height','ceiling'],['Flooring','flooring'],['Kitchen counter & sink','kitchen'],['Windows','windows'],['Doors','doors'],['Painting','paint'],['Electrical','electrical'],['Sanitary & CP fittings','sanitary'],['Railings & gate','railings'],['Water tanks','tanks'],['Lighting & automation','lighting'],['Architectural drawings','drawings'],['Interiors','interiors']];
 A.COMPARE_ROWS=[
   ['Rate',function(k){var p=A.PLANS[k];return p.rate?'₹'+A.inr(p.rate)+' / sqft':'From ₹'+A.inr(p.from)+' / sqft'}],
-  ['For 1,000 sqft',function(k){var v='₹'+A.inr(A.perThousand(k));return A.PLANS[k].rate?v:'From '+v}],
-  ['Steel',function(k){return A.PLANS[k].steel}],
-  ['Cement',function(k){return A.PLANS[k].cement}],
-  ['Ceiling height',function(k){return A.PLANS[k].ceiling}],
-  ['Architectural drawings',function(k){return A.PLANS[k].drawings}],
-  ['Interiors',function(k){return A.PLANS[k].interiors}]
-];
+  ['For 1,000 sqft',function(k){var v='₹'+A.inr(A.perThousand(k));return A.PLANS[k].rate?v:'From '+v}]
+].concat(A.CMP_ROWS.map(function(r){return [r[0],function(k){return A.PLANS[k].cmp[r[1]]}]}));
 A.cmpTable=function(keys){
   var head='<thead><tr><th scope="col">Item</th>'+keys.map(function(k){return '<th scope="col">'+A.PLANS[k].name+'</th>'}).join('')+'</tr></thead>';
   var rows=A.COMPARE_ROWS.map(function(r){return '<tr><th scope="row">'+r[0]+'</th>'+keys.map(function(k){return '<td>'+r[1](k)+'</td>'}).join('')+'</tr>'}).join('');

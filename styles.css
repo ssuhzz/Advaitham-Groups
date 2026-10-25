@@ -441,5 +441,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:2px;bac
 .boq-ctl .full{grid-column:1/-1}
 .link-row{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
 
+.bq-l{color:var(--eyebrow);font-family:var(--f-serif);font-weight:700;margin-right:.35rem}
+.bq-t small{display:block;color:var(--ink-2);font-size:.76rem;line-height:1.4;margin-top:.15rem;font-family:var(--f-body)}
 .nav-links a[aria-current="page"]{border-bottom-color:var(--ink)}
 .pk-rate .from,.plan-rate .from{font:500 .8rem var(--f-mono);color:var(--ink-2);margin-right:.4rem}
