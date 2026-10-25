@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Advaitham Groups: construction, design, interior and land development in Bengaluru. 100Ft Road, Off Kanakapura Main Road, Banashankari 6th Stage, Lingadheeranahalli, Bengaluru-560109.">
+<meta name="theme-color" content="#E1DACD">
+<title>BOQ Builder | Advaitham Groups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&family=Playfair+Display:wght@600;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>html{color-scheme:light}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="index.html#top" aria-label="Advaitham Groups, home"><span class="lg lg-mark" aria-hidden="true"><i class="k"></i><i class="b"></i></span><span class="bt"><b>ADVAITHAM</b><small>GROUPS</small></span></a>
+    <div class="nav">
+      <nav class="nav-links" id="nav-links" aria-label="Main"><a href="index.html#services">Services</a><a href="plans.html">Plans</a><a href="boq.html" aria-current="page">BOQ</a><a href="index.html#estimate">Estimator</a><a href="index.html#process">Process</a><a href="index.html#team">Team</a><a href="index.html#work">Work</a></nav>
+      <a class="btn btn-primary btn-sm" href="index.html#contact">Get a quote</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main>
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">BOQ builder</p>
+    <h1 class="ph">Build your <span class="hl">BOQ.</span></h1>
+    <p class="ph-p">Choose a package, plot size and floors to see where the cost goes, from steel and cement to electrical. Quantities follow standard thumb-rules for RCC-framed homes, and the package total is split across categories by typical material and labour weightage. A drawing-accurate BOQ follows your site visit.</p>
+    <div class="boq-ctl" style="margin-top:1.8rem">
+      <fieldset class="full"><legend class="field-l">Package</legend><div class="chips" id="pkg-chips"></div></fieldset>
+      <div>
+        <div class="field-h"><label class="field-l" for="plot">Built-up area per floor</label><output class="field-v" id="plot-v" for="plot">1,200 sqft</output></div>
+        <input type="range" id="plot" min="600" max="3000" step="50" value="1200">
+        <div class="range-ends"><span>600</span><span>3,000 sqft</span></div>
+      </div>
+      <fieldset><legend class="field-l" id="floors-l">Floors</legend><div class="chips" id="floors-chips"></div></fieldset>
+      <fieldset class="full"><legend class="field-l">Project type</legend><div class="chips" id="type-chips"></div></fieldset>
+    </div>
+    <div class="boq-sum" id="boq-sum"></div>
+    <div class="boq-tools">
+      <button class="btn btn-ghost btn-sm" id="boq-exp" type="button">Expand all</button>
+      <button class="btn btn-ghost btn-sm" id="boq-col" type="button">Collapse all</button>
+    </div>
+    <div id="boq-cats"></div>
+    <div class="bq-total" id="boq-total"></div>
+    <p class="boq-note">The grand total covers materials, labour and project management. It excludes GST, permits and approvals, architect fees for new drawings, and interiors, which are priced separately. Steel is estimated at about 4.2 kg per sqft. Concrete is supplied ready-mixed, so cement appears under masonry and plaster only. This is a planning-stage estimate.</p>
+    <div class="est-actions">
+      <a class="btn btn-primary" id="boq-wa" href="https://wa.me/917022250878" target="_blank" rel="noopener">Send this BOQ to our team</a>
+      <button class="btn btn-ghost" id="boq-copy" type="button">Copy BOQ</button>
+      <a class="btn btn-ghost" href="plans.html">Compare plans</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a href="index.html#top" aria-label="Advaitham Groups, back to top"><span class="lg lg-full" role="img" aria-label="Advaitham Groups. Construction, Design, Interior, Land Developers"><i class="k"></i><i class="b"></i></span></a>
+    <address>100Ft Road, Off Kanakapura Main Road,<br>Banashankari 6th Stage, Lingadheeranahalli,<br>Bengaluru-560109.<br>+91 70222 50878</address>
+    <nav aria-label="Footer">
+      <a href="index.html#services">Services</a><a href="plans.html">Plans</a><a href="boq.html">BOQ</a><a href="index.html#estimate">Estimator</a><a href="index.html#process">Process</a><a href="index.html#team">Team</a><a href="index.html#work">Work</a><a href="index.html#contact">Contact</a>
+    </nav>
+    <small class="cp">© 2026 Advaitham Groups, Bangalore. Construction | Design | Interior | Land Developers.</small>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/917022250878?text=Hi%20Advaitham%20Groups%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with Advaitham Groups on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/></svg><span>WhatsApp</span>
+</a>
+<script src="site.js"></script>
+<script>
+var A=ADV,$=A.$,$$=A.$$,inr=A.inr,waLink=A.waLink,copyText=A.copyText,STAGES=A.STAGES,PLANS=A.PLANS,ORDER=A.ORDER;
+
+var q=new URLSearchParams(location.search);
+var S=A.clean(q.has('pkg')?{pkg:q.get('pkg'),plot:q.get('plot'),floors:q.get('floors'),type:q.get('type')}:A.load());
+var boqText='';
+function buildFloors(){
+  if(S.type==='ext'&&S.floors>4)S.floors=4;
+  $('#floors-l').textContent=S.type==='ext'?'Floors to add':'Floors';
+  A.chipGroup($('#floors-chips'),'floors',A.floorItems(S),S.floors,function(v){S.floors=+v;render()});
+}
+function render(){
+  var d=A.boqData(S),c=d.c,openSet=$$('#boq-cats details').map(function(e){return e.open});
+  $('#plot-v').textContent=inr(S.plot)+' sqft';
+  $('#boq-sum').innerHTML=[['Package',c.pkg],['Built-up area',inr(c.area)+' sqft'],['Floors',A.floorLabel(S)],['Estimated total','₹'+inr(d.total)]].map(function(r){return '<div><div class="l">'+r[0]+'</div><div class="v">'+r[1]+'</div></div>'}).join('');
+  $('#boq-cats').innerHTML=d.cats.map(function(k,i){
+    var rows=k.items.map(function(it){
+      var r=it.rate>=100?inr(it.rate):it.rate.toFixed(2);
+      return '<tr><td>'+it.n+'</td><td class="r">'+A.qfmt(it.q,it.u)+'</td><td>'+it.u+'</td><td class="r">'+r+'</td><td class="r">'+inr(it.amt)+'</td></tr>';
+    }).join('');
+    var isOpen=openSet.length?openSet[i]:i===1;
+    return '<details class="bq-cat"'+(isOpen?' open':'')+'><summary><span class="bq-n">'+k.n+'</span><span class="bq-share">'+k.w+'% of total</span><span class="bq-sub">₹'+inr(k.sub)+'</span></summary><div class="tbl"><table class="bq-t"><thead><tr><th>Item</th><th class="r">Qty</th><th>Unit</th><th class="r">Rate (₹)</th><th class="r">Amount (₹)</th></tr></thead><tbody>'+rows+'</tbody></table></div></details>';
+  }).join('');
+  $('#boq-total').innerHTML='<span>Grand total, '+c.pkg+' package</span><b>₹'+inr(d.total)+'</b>';
+  var lines=['Hi Advaitham Groups, here is the BOQ I generated on your site.',A.floorLabel(S)+', '+inr(c.area)+' sqft total, '+c.pkg+' package'].concat(d.cats.map(function(k){return k.n+': ₹'+inr(k.sub)}),['Grand total: ₹'+inr(d.total),'I would like to discuss this.']);
+  boqText=lines.join('\n');
+  $('#boq-wa').href=waLink(boqText);
+  A.save(S);
+}
+var plot=$('#plot');plot.value=S.plot;
+buildFloors();
+A.chipGroup($('#type-chips'),'type',[{v:'new',t:'New construction'},{v:'ext',t:'Floor extension'}],S.type,function(v){S.type=v;buildFloors();render()});
+A.chipGroup($('#pkg-chips'),'pkg',A.PRICED.map(function(k){return {v:k,t:PLANS[k].name+' · ₹'+inr(PLANS[k].rate)}}),S.pkg,function(v){S.pkg=v;render()});
+plot.addEventListener('input',function(e){S.plot=+e.target.value;render()});
+$('#boq-exp').addEventListener('click',function(){$$('#boq-cats details').forEach(function(e){e.open=true})});
+$('#boq-col').addEventListener('click',function(){$$('#boq-cats details').forEach(function(e){e.open=false})});
+$('#boq-copy').addEventListener('click',function(e){copyText(boqText,e.currentTarget)});
+render();
+
+</script>
+</body>
+</html>

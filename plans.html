@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Advaitham Groups: construction, design, interior and land development in Bengaluru. 100Ft Road, Off Kanakapura Main Road, Banashankari 6th Stage, Lingadheeranahalli, Bengaluru-560109.">
+<meta name="theme-color" content="#E1DACD">
+<title>Plans and Pricing | Advaitham Groups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&family=Playfair+Display:wght@600;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>html{color-scheme:light}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="index.html#top" aria-label="Advaitham Groups, home"><span class="lg lg-mark" aria-hidden="true"><i class="k"></i><i class="b"></i></span><span class="bt"><b>ADVAITHAM</b><small>GROUPS</small></span></a>
+    <div class="nav">
+      <nav class="nav-links" id="nav-links" aria-label="Main"><a href="index.html#services">Services</a><a href="plans.html" aria-current="page">Plans</a><a href="boq.html">BOQ</a><a href="index.html#estimate">Estimator</a><a href="index.html#process">Process</a><a href="index.html#team">Team</a><a href="index.html#work">Work</a></nav>
+      <a class="btn btn-primary btn-sm" href="index.html#contact">Get a quote</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main>
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Transparent pricing</p>
+    <h1 class="ph">Pick your package. <span class="hl">We handle the rest.</span></h1>
+    <p class="ph-p">No hidden charges and no vague line items. Every package includes milestone payments, a 3D walkthrough and a dedicated project manager from day one.</p>
+    <div class="calc">
+      <label for="calc-area">Your built-up area</label>
+      <div class="calc-in"><input id="calc-area" type="number" min="400" max="10000" step="50" value="1200" inputmode="numeric"><span>sqft</span></div>
+      <div class="calc-out" id="calc-out" aria-live="polite"></div>
+    </div>
+    <p class="calc-note" id="calc-note"></p>
+  </div>
+</section>
+
+<section class="sec alt" id="packages">
+  <div class="wrap">
+    <div class="pk-grid" id="pk-grid"></div>
+    <div class="pk-custom" id="pk-custom"></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="banner">
+      <div>
+        <p class="eyebrow">Go one level deeper</p>
+        <h2>Want the itemised version? Build your BOQ.</h2>
+        <p>See exactly how your package's cost splits across steel, cement, blockwork, flooring, electrical and every other category, with real quantities and not just a per-sqft number.</p>
+      </div>
+      <a class="btn btn-primary" href="boq.html">Open BOQ builder →</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap">
+    <header class="sec-head"><div><p class="eyebrow">Every package, every project</p><h2>These never change, whatever the tier.</h2><p>Our differentiators are not upsells. They come with every package, because that is how we know how to build.</p></div></header>
+    <div class="never">
+      <div><h3>3D walkthrough</h3><p>Walk through your home before construction starts, so layouts are settled before any wall goes up.</p><span class="tag">Included free</span></div>
+      <div><h3>Milestone payments</h3><p>No advance. You pay once each milestone is inspected and verified.</p><span class="tag">Included free</span></div>
+      <div><h3>Weekly progress reports</h3><p>A dated report with photos, so you always know where your build stands.</p><span class="tag">Included free</span></div>
+      <div><h3>Dedicated project manager</h3><p>One point of contact who coordinates the team and keeps the build on schedule.</p><span class="tag">Included free</span></div>
+      <div><h3>Quality checkpoints</h3><p>Steel inspection before pours, services checks before plastering, flood tests before tiling.</p><span class="tag">Included free</span></div>
+      <div><h3>Cube tests, every pour</h3><p>Concrete cube results shared with you for each pour, so strength is on record.</p><span class="tag">Included free</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="compare">
+  <div class="wrap">
+    <header class="sec-head"><div><p class="eyebrow">Compare</p><h2>Compare plans side by side</h2><p>Select two plans to compare, or see all five at once.</p></div></header>
+    <div class="cmp">
+      <div class="cmp-head">
+        <h3>Select two plans to compare</h3>
+        <div class="cmp-sel">
+          <div><label for="cmp-a">Plan A</label><select id="cmp-a"></select></div>
+          <div><label for="cmp-b">Plan B</label><select id="cmp-b"></select></div>
+        </div>
+      </div>
+      <div class="tbl"><table id="cmp-pair"></table></div>
+      <div><button class="btn btn-ghost btn-sm" id="cmp-all-btn" type="button" aria-expanded="false">Show all packages side by side</button></div>
+      <div class="tbl" id="cmp-all-wrap" hidden><table id="cmp-table"></table></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap cta-band">
+    <h2>Ready to start? Let's talk.</h2>
+    <p>Share your plot details and we will put together a detailed BOQ after a site visit. No obligation.</p>
+    <div class="cta-row"><a class="btn btn-primary" href="index.html#contact">Start your project →</a><a class="btn btn-ghost" href="boq.html">Open BOQ builder</a></div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a href="index.html#top" aria-label="Advaitham Groups, back to top"><span class="lg lg-full" role="img" aria-label="Advaitham Groups. Construction, Design, Interior, Land Developers"><i class="k"></i><i class="b"></i></span></a>
+    <address>100Ft Road, Off Kanakapura Main Road,<br>Banashankari 6th Stage, Lingadheeranahalli,<br>Bengaluru-560109.<br>+91 70222 50878</address>
+    <nav aria-label="Footer">
+      <a href="index.html#services">Services</a><a href="plans.html">Plans</a><a href="boq.html">BOQ</a><a href="index.html#estimate">Estimator</a><a href="index.html#process">Process</a><a href="index.html#team">Team</a><a href="index.html#work">Work</a><a href="index.html#contact">Contact</a>
+    </nav>
+    <small class="cp">© 2026 Advaitham Groups, Bangalore. Construction | Design | Interior | Land Developers.</small>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/917022250878?text=Hi%20Advaitham%20Groups%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with Advaitham Groups on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/></svg><span>WhatsApp</span>
+</a>
+<script src="site.js"></script>
+<script>
+var A=ADV,$=A.$,$$=A.$$,inr=A.inr,waLink=A.waLink,copyText=A.copyText,STAGES=A.STAGES,PLANS=A.PLANS,ORDER=A.ORDER;
+
+var grid=$('#pk-grid');
+function cardHtml(k){
+  var p=PLANS[k],pop=k==='premium';
+  var badge=pop?'<span class="pk-badge">Most popular</span>':(k==='luxury'?'<span class="pk-badge soft">Basic interiors included</span>':'');
+  return '<article class="pk'+(pop?' pop':'')+'">'+badge+'<span class="pk-no">'+p.no+' / '+p.name+'</span><h2>'+p.name+'</h2><div class="pk-rate">₹'+inr(p.rate)+'<small>/ sqft</small></div><div class="pk-total">₹'+inr(A.perThousand(k))+' for 1,000 sqft</div><p class="pk-blurb">'+p.blurb+'</p><ul class="ticks">'+p.hl.map(function(t){return '<li>'+t+'</li>'}).join('')+'</ul><a class="btn '+(pop?'btn-primary':'btn-ghost')+'" href="index.html#contact">Get a quote for '+p.name+' →</a></article>';
+}
+grid.innerHTML=A.PRICED.map(cardHtml).join('');
+var c=PLANS.custom;
+$('#pk-custom').innerHTML='<div><span class="tag">05 / Flexible, custom scope</span><h2>Custom</h2><div class="pk-rate"><span class="from">From</span>₹'+inr(c.from)+'<small>/ sqft</small></div><div class="pk-total">Starting from ₹'+inr(c.from*1000)+' for 1,000 sqft, final price set after BOQ</div><p class="pk-blurb" style="margin-top:.7rem">'+c.blurb+'</p><a class="btn btn-ghost" href="index.html#contact">Get a custom quote →</a></div><ul class="ticks">'+c.hl.map(function(t){return '<li>'+t+'</li>'}).join('')+'</ul>';
+function calcRange(){
+  var area=Math.max(0,+$('#calc-area').value||0),eff=Math.max(0,area-200);
+  $('#calc-out').textContent=eff?'₹'+inr(eff*PLANS.custom.from)+' – ₹'+inr(eff*PLANS.luxury.rate):'Enter an area above 200 sqft';
+  $('#calc-note').textContent='Effective built-up area after setbacks: '+inr(eff)+' sqft. About 200 sqft is deducted for setbacks, common walls and unusable areas. The range runs from the Custom starting rate to Luxury Royale.';
+}
+$('#calc-area').addEventListener('input',calcRange);calcRange();
+var a=$('#cmp-a'),b=$('#cmp-b');
+[a,b].forEach(function(sel){sel.innerHTML=ORDER.map(function(k){return '<option value="'+k+'">'+PLANS[k].name+'</option>'}).join('')});
+a.value='essential';b.value='premium';
+function pair(){$('#cmp-pair').innerHTML=A.cmpTable([a.value,b.value])}
+a.addEventListener('change',pair);b.addEventListener('change',pair);pair();
+$('#cmp-table').innerHTML=A.cmpTable(ORDER);
+var allBtn=$('#cmp-all-btn');
+allBtn.addEventListener('click',function(){
+  var w=$('#cmp-all-wrap'),open=w.hidden;w.hidden=!open;
+  allBtn.setAttribute('aria-expanded',open?'true':'false');
+  allBtn.textContent=open?'Hide all packages':'Show all packages side by side';
+});
+if(location.hash==='#compare'){var e=$('#compare');if(e)e.scrollIntoView()}
+
+</script>
+</body>
+</html>
