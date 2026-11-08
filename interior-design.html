@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Advaitham Groups: construction, design, interior and land development in Bengaluru. 100Ft Road, Off Kanakapura Main Road, Banashankari 6th Stage, Lingadheeranahalli, Bengaluru-560109.">
+<meta name="theme-color" content="#E1DACD">
+<title>Interior Design Packages | Advaitham Groups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&family=Playfair+Display:wght@600;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>html{color-scheme:light}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="index.html#top" aria-label="Advaitham Groups, home"><span class="lg lg-mark" aria-hidden="true"><i class="k"></i><i class="b"></i></span><span class="bt"><b>ADVAITHAM</b><small>GROUPS</small></span></a>
+    <div class="nav">
+      <nav class="nav-links" id="nav-links" aria-label="Main"><a href="index.html#services">Services</a><a href="plans.html" aria-current="page">Plans</a><a href="boq.html">BOQ</a><a href="index.html#estimate">Estimator</a><a href="index.html#process">Process</a><a href="index.html#team">Team</a><a href="index.html#work">Work</a></nav>
+      <a class="btn btn-primary btn-sm" href="index.html#contact">Get a quote</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main>
+<section class="sec">
+  <div class="wrap">
+    <a class="ip-back" href="plans.html">&larr; Back to plans</a>
+    <p class="eyebrow">Interior design</p>
+    <h1 class="ph">Interior design <span class="hl">packages.</span></h1>
+    <p class="ph-p">A detailed, item-by-item specification for every interior package we offer, so you know exactly what material, hardware and finish you are paying for before you sign off.</p>
+    <div class="plan-tabs ispec-tabs" id="ispec-tabs" role="tablist" aria-label="Interior packages"></div>
+    <div class="ispec-panel" id="ispec-panel" role="tabpanel"></div>
+    <div class="enq-modal" id="ispec-enq" hidden role="dialog" aria-modal="true" aria-labelledby="ispec-enq-h">
+      <div class="enq-box">
+        <div class="enq-head">
+          <div><p class="eyebrow">Start a conversation</p><h2 id="ispec-enq-h">Let&rsquo;s build something real.</h2></div>
+          <button class="enq-x" type="button" aria-label="Close enquiry">&times;</button>
+        </div>
+        <div class="enq-body">
+          <form class="form" id="ispec-form" novalidate>
+            <div class="fld"><label for="i-name">Name</label><input id="i-name" type="text" autocomplete="name" placeholder="Your full name"><p class="err" id="e-i-name"></p></div>
+            <div class="fld"><label for="i-email">Email</label><input id="i-email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+            <div class="fld"><label for="i-phone">Phone number</label><input id="i-phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91 98XXX XXXXX"><p class="err" id="e-i-phone"></p></div>
+            <div class="fld"><label for="i-type">Project type</label><select id="i-type"><option value="">Select type</option><option>New construction</option><option>Floor extension</option><option>Design only</option><option>Full interiors</option><option>Construction + interiors</option><option>Other</option></select></div>
+            <div class="fld"><label for="i-plot">Plot location</label><input id="i-plot" type="text" placeholder="Area in Bangalore or nearby"></div>
+            <div class="fld"><label for="i-area">Approx built-up area (sqft)</label><input id="i-area" type="text" inputmode="numeric" placeholder="e.g. 2400"></div>
+            <div class="fld full"><label class="ispec-consent"><input id="i-consent" type="checkbox"> <span>I agree to be contacted about my enquiry and accept the Privacy Policy.</span></label><p class="err" id="e-i-consent"></p></div>
+            <div class="full"><button class="btn btn-primary" type="submit">Submit &rarr;</button></div>
+          </form>
+          <div class="enq-out" id="ispec-out" hidden>
+            <h3>Your enquiry is ready</h3>
+            <p>Nothing has been sent yet. Open WhatsApp and press send to reach our team.</p>
+            <pre id="ispec-pre"></pre>
+            <div class="est-actions"><a class="btn btn-primary" id="ispec-wa" href="https://wa.me/917892658981" target="_blank" rel="noopener">Open WhatsApp</a><button class="btn btn-ghost" type="button" id="ispec-copy">Copy message</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec alt">
+  <div class="wrap">
+    <p class="eyebrow">Package comparison</p>
+    <div class="ptable-wrap"><table class="ptable">
+      <thead><tr><th>Item</th><th>Package 1 &middot; Essential</th><th>Package 2 &middot; Premium Mid</th><th>Package 3 &middot; Luxury</th></tr></thead>
+      <tbody><tr><td>Kitchen Base</td><td>₹950/Sqft</td><td><b>₹1,200/Sqft</b></td><td>₹1,550/Sqft</td></tr><tr><td>Kitchen Pantry</td><td>₹3,500/Set</td><td><b>₹5,000/Set</b></td><td>₹7,500/Set</td></tr><tr><td>Kitchen Middle</td><td>₹1,000/Sqft</td><td><b>₹1,250/Sqft</b></td><td>₹1,650/Sqft</td></tr><tr><td>Kitchen Loft</td><td>₹800/Sqft</td><td><b>₹1,000/Sqft</b></td><td>₹1,300/Sqft</td></tr><tr><td>Basket Set</td><td>₹3,500/Set</td><td><b>₹5,000/Set</b></td><td>₹7,500/Set</td></tr><tr><td>Bottle Pull-Out</td><td>₹2,250/Set</td><td><b>₹3,000/Set</b></td><td>₹4,500/Set</td></tr><tr><td>TV Unit</td><td>₹800/Sqft</td><td><b>₹1,000/Sqft</b></td><td>₹1,350/Sqft</td></tr><tr><td>Pooja Unit</td><td>₹1,150/Sqft</td><td><b>₹1,400/Sqft</b></td><td>₹1,850/Sqft</td></tr><tr><td>Bedroom Wardrobe</td><td>₹950/Sqft</td><td><b>₹1,200/Sqft</b></td><td>₹1,550/Sqft</td></tr><tr><td>Master Bedroom Loft</td><td>₹800/Sqft</td><td><b>₹1,000/Sqft</b></td><td>₹1,300/Sqft</td></tr></tbody>
+    </table></div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">General terms</p>
+    <ol class="terms"><li>Rates are applicable to the specified scope and specifications only.</li><li>Final quantities will be measured as per approved drawings/design.</li><li>Colour, laminate, hardware and finish selections are subject to package limits.</li><li>Any change in specification or upgrade requested by the client will be charged additionally.</li><li>Civil, electrical, plumbing, painting, false ceiling, glass, mirror, appliances and decorative works are excluded unless specifically mentioned.</li><li>Additional/fancy works will be charged separately based on actual requirement.</li><li>Final design and material selections shall be approved before commencement of production.</li><li>Rates are intended as package rates and may be revised where the client selects specialty materials, imported hardware or customized finishes.</li><li>All dimensions and quantities shall be finalized based on the approved working drawings.</li></ol>
+  </div>
+</section>
+<section class="sec alt">
+  <div class="wrap cta-band">
+    <h2>Ready to start? Let's talk.</h2>
+    <p>Share your floor plan and we will confirm the package and a detailed quote after a site visit. No obligation.</p>
+    <div class="cta-row"><a class="btn btn-primary" href="index.html#contact">Start your project &rarr;</a><a class="btn btn-ghost" href="plans.html">Back to plans</a></div>
+  </div>
+</section>
+</main><footer class="foot">
+  <div class="wrap foot-in">
+    <a href="index.html#top" aria-label="Advaitham Groups, back to top"><span class="lg lg-full" role="img" aria-label="Advaitham Groups. Construction, Design, Interior, Land Developers"><i class="k"></i><i class="b"></i></span></a>
+    <address>100Ft Road, Off Kanakapura Main Road,<br>Banashankari 6th Stage, Lingadheeranahalli,<br>Bengaluru-560109.<br>+91 7892658981</address>
+    <nav aria-label="Footer">
+      <a href="index.html#services">Services</a><a href="plans.html">Plans</a><a href="boq.html">BOQ</a><a href="index.html#estimate">Estimator</a><a href="index.html#process">Process</a><a href="index.html#team">Team</a><a href="index.html#work">Work</a><a href="index.html#contact">Contact</a>
+    </nav>
+    <small class="cp">© 2026 Advaitham Groups, Bangalore. Construction | Design | Interior | Land Developers.</small>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/917892658981?text=Hi%20Advaitham%20Groups%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with Advaitham Groups on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/></svg><span>WhatsApp</span>
+</a>
+<script src="site.js"></script>
+<script>
+var A=ADV,$=A.$,$$=A.$$,inr=A.inr,waLink=A.waLink,copyText=A.copyText,STAGES=A.STAGES,PLANS=A.PLANS,ORDER=A.ORDER;
+
+var IPK=[
+ {k:'essential',label:'Essential',title:'Package 1 — Essential / Standard variant',sub:'Cost-conscious, good quality, fewer premium hardware and accessories.',
+  items:[
+   {n:'Kitchen Base Unit',d:'Constructed using 16mm good-quality MR-grade plywood, finished with 0.8mm laminate internally and 0.8mm/1mm laminate externally. Includes standard hardware fittings and 1mm PVC edge banding for a neat and durable finish.',p:'₹950',u:'per Sqft'},
+   {n:'Kitchen Pantry Unit',d:'Tall kitchen storage unit with standard baskets/shelves, suitable for organized grocery storage. Includes standard fittings and sliding mechanism.',p:'₹3,500',u:'per Set'},
+   {n:'Kitchen Middle Unit',d:'Constructed using 16mm MR-grade plywood with 0.8mm laminate internally and 0.8mm/1mm laminate externally. Includes standard hardware and 1mm PVC edge banding.',p:'₹1,000',u:'per Sqft'},
+   {n:'Kitchen Loft Unit',d:'Constructed using 16mm MR-grade plywood, finished with 0.8mm laminate internally and 0.8mm/1mm laminate externally, including standard hardware and edge banding.',p:'₹800',u:'per Sqft'},
+   {n:'Basket Set',d:'Standard-quality kitchen basket set with necessary fittings.',p:'₹3,500',u:'per Set'},
+   {n:'Bottle Pull-Out',d:'Standard bottle pull-out unit with smooth operating mechanism and required fittings.',p:'₹2,250',u:'per Set'},
+   {n:'TV Unit',d:'Constructed using 16mm MR-grade plywood with 0.8mm laminate internally and 0.8mm/1mm laminate externally. Includes standard hardware and PVC edge banding.',p:'₹800',u:'per Sqft'},
+   {n:'Pooja Unit',d:'Constructed using 16mm MR-grade plywood, finished with laminate internally and externally. Includes standard hardware and PVC edge banding.',p:'₹1,150',u:'per Sqft'},
+   {n:'Bedroom Wardrobe',d:'Constructed using 16mm MR-grade plywood with 0.8mm laminate internally and 0.8mm/1mm laminate externally. Includes standard hardware and PVC edge banding.',p:'₹950',u:'per Sqft'},
+   {n:'Master Bedroom Loft',d:'Built using 16mm MR-grade plywood with laminate finish internally and externally, including standard hardware and PVC edge banding.',p:'₹800',u:'per Sqft'}
+  ],
+  extra:'<b>Extra works</b>Fancy, decorative, electrical, civil, plumbing works and additional items outside the above scope will be charged separately based on actual requirements.'},
+ {k:'premium-mid',label:'Premium Mid',title:'Package 2 — Premium / Mid variant',sub:'The benchmark specification — upgraded plywood grade, laminate, and hardware.',items:[{n:'Kitchen Base Unit',d:'Made with 16mm BWP-grade plywood carcass, finished with 0.8mm fabric laminate internally and 1mm colour laminate externally. Complete with standard premium hardware fittings and 2mm PVC edge banding.',p:'₹1,200',u:'per Sqft'},{n:'Kitchen Pantry Unit',d:'Tall kitchen storage unit with multiple baskets/shelves, smooth sliding mechanism and complete fittings for organized grocery storage.',p:'₹5,000',u:'per Set'},{n:'Kitchen Middle Unit',d:'Constructed using 16mm BWP-grade plywood, finished with 0.8mm fabric laminate internally and 1mm colour laminate externally, including standard hardware and 2mm PVC edge banding.',p:'₹1,250',u:'per Sqft'},{n:'Kitchen Loft Unit',d:'Made with 16mm BWP-grade plywood, finished with 0.8mm fabric laminate internally and 1mm colour laminate externally, including standard hardware and 2mm PVC edge banding.',p:'₹1,000',u:'per Sqft'},{n:'Basket Set',d:'Premium-quality storage basket set with complete fittings.',p:'₹5,000',u:'per Set'},{n:'Bottle Pull-Out',d:'Smooth sliding pull-out bottle storage unit supplied as a complete set with necessary fittings.',p:'₹3,000',u:'per Set'},{n:'TV Unit',d:'Made with 16mm BWP-grade plywood, finished with 0.8mm fabric laminate internally and 1mm glossy colour laminate externally, including standard hardware and 2mm PVC edge banding.',p:'₹1,000',u:'per Sqft'},{n:'Pooja Unit',d:'Constructed using 16mm BWP-grade plywood, 0.8mm fabric laminate internally and 1mm colour laminate externally, fitted with branded hardware and 2mm PVC edge banding.',p:'₹1,400',u:'per Sqft'},{n:'Bedroom Wardrobe',d:'Fabricated using 16mm BWP-grade plywood, finished with 0.8mm fabric laminate internally and 1mm glossy laminate externally, complete with premium hardware and 2mm PVC edge banding.',p:'₹1,200',u:'per Sqft'},{n:'Master Bedroom Loft',d:'Built using 16mm BWP-grade plywood, 0.8mm fabric laminate internally and 1mm glossy laminate externally, fitted with branded hardware and 2mm PVC edge banding.',p:'₹1,000',u:'per Sqft'}],extra:'<b>Extra works</b>Fancy, decorative, electrical, civil, plumbing works and additional items will be charged separately based on actual cost/requirement.'},
+ {k:'luxury',label:'Luxury',title:'Package 3 — Luxury / Premium Plus variant',sub:'Upgraded plywood, laminates, branded hardware, accessories and finishing.',items:[{n:'Kitchen Base Unit',d:'Constructed using 18mm BWP-grade plywood carcass with superior moisture resistance and durability. Finished with premium 1mm laminate internally and premium 1mm/1.25mm laminate or selected acrylic finish externally. Includes branded soft-close hardware, premium hinges/channels and 2mm PVC edge banding.',p:'₹1,550',u:'per Sqft'},{n:'Kitchen Pantry Unit',d:'Premium tall pantry storage with multiple high-quality baskets, pull-out systems and soft-close mechanisms. Includes branded fittings and accessories.',p:'₹7,500',u:'per Set'},{n:'Kitchen Middle Unit',d:'Constructed using 18mm BWP-grade plywood with premium internal laminate and high-quality external laminate/acrylic finish. Includes branded soft-close hardware and 2mm PVC edge banding.',p:'₹1,650',u:'per Sqft'},{n:'Kitchen Loft Unit',d:'Constructed using 18mm BWP-grade plywood with premium laminate finish internally and externally, including branded hardware and 2mm PVC edge banding.',p:'₹1,300',u:'per Sqft'},{n:'Premium Basket Set',d:'Premium branded kitchen basket system with heavy-duty construction, smooth operation and soft-close mechanism.',p:'₹7,500',u:'per Set'},{n:'Premium Bottle Pull-Out',d:'Heavy-duty branded bottle pull-out with smooth telescopic/soft-close mechanism and complete fittings.',p:'₹4,500',u:'per Set'},{n:'TV Unit',d:'Constructed using 18mm BWP-grade plywood with premium internal finish and premium laminate/acrylic finish externally. Includes branded hardware, concealed fittings and 2mm PVC edge banding.',p:'₹1,350',u:'per Sqft'},{n:'Luxury Pooja Unit',d:'Constructed using 18mm BWP-grade plywood with premium laminate finish, selected decorative elements and branded hardware. Includes 2mm PVC edge banding and provision for integrated lighting wherever required.',p:'₹1,850',u:'per Sqft'},{n:'Bedroom Wardrobe',d:'Fabricated using 18mm BWP-grade plywood, finished with premium laminate internally and premium laminate/acrylic finish externally. Includes branded soft-close hinges, channels and premium accessories with 2mm PVC edge banding.',p:'₹1,550',u:'per Sqft'},{n:'Master Bedroom Loft',d:'Built using 18mm BWP-grade plywood with premium internal and external laminate finish, branded hardware and 2mm PVC edge banding.',p:'₹1,300',u:'per Sqft'}],note:{t:'Luxury hardware &amp; accessories',d:'Premium package may include branded soft-close hinges, drawer channels, tandem boxes, lift-up mechanisms, wardrobe accessories and other premium fittings, subject to the approved design.'},extra:'<b>Extra works</b>Fancy, decorative, electrical, civil, plumbing, specialty finishes, glass, mirrors, lighting, premium accessories and additional items outside the defined scope will be charged separately based on actual cost/requirement.',enq:true},
+ {k:'ultra-luxury',label:'Ultra Luxury',title:'Package 4 — Ultra Luxury',sub:'',items:[],extra:'',enq:true,custom:'<div class="ispec-ultra"><div class="ispec-ultra-rate">₹2,999<small>/sqft* onwards</small></div><p>Fully customised as per the client&rsquo;s requirements and specifications, based on the design. Elevation will be ultra luxurious, with the ultra luxurious finishing of the home.</p><button class="btn btn-primary" type="button" data-open>Enquire about ultra luxury &rarr;</button></div>'}
+];
+var enq=$('#ispec-enq');document.body.appendChild(enq);
+var tabs=$('#ispec-tabs'),panel=$('#ispec-panel'),cur='Essential';
+function show(k){
+  var P=IPK.filter(function(x){return x.k===k})[0]||IPK[0];
+  cur=P.label;
+  tabs.innerHTML='';
+  IPK.forEach(function(x){
+    var b=document.createElement('button');b.type='button';b.className='plan-tab';b.id='ispec-tab-'+x.k;
+    b.setAttribute('role','tab');b.setAttribute('aria-selected',x===P?'true':'false');b.textContent=x.label;
+    b.addEventListener('click',function(){show(x.k);try{history.replaceState(null,'','#'+x.k)}catch(err){}});
+    tabs.appendChild(b);
+  });
+  var h='<h2 class="ispec-title">'+P.title+'</h2>';
+  if(P.sub) h+='<p class="ispec-sub">'+P.sub+'</p>';
+  if(P.items.length){
+    h+='<ul class="ispec-list">'+P.items.map(function(it){return '<li class="ispec"><div><h3>'+it.n+'</h3><p>'+it.d+'</p></div><span class="ispec-price">'+it.p+'<small>'+it.u+'</small></span></li>'}).join('')+'</ul>';
+    if(P.note) h+='<div class="ispec-note"><b>'+P.note.t+'</b>'+P.note.d+'</div>';
+    if(P.extra) h+='<p class="ispec-extra">'+P.extra+'</p>';
+    if(P.enq) h+='<button class="btn btn-primary ispec-open" type="button" data-open>Enquire about the '+P.label+' package &rarr;</button>';
+  } else if(P.custom){
+    h+=P.custom;
+  } else {
+    h+='<p class="ispec-sub">Item-by-item specifications for this package are being added. Prices for every item are in the comparison table below.</p>';
+  }
+  panel.innerHTML=h;
+  panel.setAttribute('aria-labelledby','ispec-tab-'+P.k);
+  panel.querySelectorAll('[data-open]').forEach(function(bt){bt.addEventListener('click',openEnq)});
+}
+function openEnq(){enq.hidden=false;document.body.style.overflow='hidden';var f=enq.querySelector('input');if(f)f.focus()}
+function closeEnq(){enq.hidden=true;document.body.style.overflow=''}
+enq.addEventListener('click',function(ev){if(ev.target===enq||ev.target.closest('.enq-x'))closeEnq()});
+document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&!enq.hidden)closeEnq()});
+function setE(id,msg){var el=$('#e-i-'+id),inp=$('#i-'+id);if(el)el.textContent=msg;if(inp)inp.setAttribute('aria-invalid',msg?'true':'false')}
+var form=$('#ispec-form'),out=$('#ispec-out'),lastMsg='';
+form.addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var v=function(id){return $('#i-'+id).value.trim()};
+  var name=v('name'),phone=v('phone'),digits=phone.replace(/\D/g,''),consent=$('#i-consent').checked;
+  setE('name',name?'':'Enter your name.');
+  setE('phone',digits.length>=10?'':'Enter a 10-digit mobile number.');
+  setE('consent',consent?'':'Please accept to be contacted.');
+  if(!name||digits.length<10||!consent){var bad=$('[aria-invalid="true"]',form);if(bad)bad.focus();return}
+  var lines=['Hi Advaitham Groups, I would like to enquire about the '+cur+' interior package.','Name: '+name,'Phone: '+phone];
+  if(v('email'))lines.push('Email: '+v('email'));
+  if($('#i-type').value)lines.push('Project type: '+$('#i-type').value);
+  if(v('plot'))lines.push('Plot location: '+v('plot'));
+  if(v('area'))lines.push('Built-up area: '+v('area')+' sqft');
+  lastMsg=lines.join('\n');
+  $('#ispec-pre').textContent=lastMsg;
+  $('#ispec-wa').href=waLink(lastMsg);
+  out.hidden=false;
+  out.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+$('#ispec-copy').addEventListener('click',function(ev){copyText(lastMsg,ev.currentTarget)});
+var start=(location.hash||'').replace('#','');
+show(IPK.some(function(x){return x.k===start})?start:'essential');
+
+</script>
+</body>
+</html>

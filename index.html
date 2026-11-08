@@ -105,6 +105,33 @@
   </div>
 </section>
 
+<section class="sec" id="built">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow">What we build</p>
+      <h2>Built for every scale.</h2>
+      <p>Homes, offices and interiors, planned and built to the same standard from the first drawing to handover.</p>
+    </header>
+    <ul class="built-grid">
+      <li><figure class="built-card">
+        <img src="img/residential.jpg" alt="Residential construction: homes built for modern living" width="836" height="470" loading="lazy">
+        <figcaption><span>01</span></figcaption>
+      </figure></li>
+      <li><figure class="built-card">
+        <img src="img/commercial.jpg" alt="Commercial construction: spaces that drive business forward" width="836" height="470" loading="lazy">
+        <figcaption><span>02</span></figcaption>
+      </figure></li>
+      <li><figure class="built-card">
+        <img src="img/interior.jpg" alt="Interior design: thoughtful interiors for better living" width="836" height="471" loading="lazy">
+        <figcaption><span>03</span></figcaption>
+      </figure></li>
+      <li><figure class="built-card">
+        <img src="img/office.jpg" alt="Commercial and office interiors: functional, stylish and people-centric" width="836" height="471" loading="lazy">
+        <figcaption><span>04</span></figcaption>
+      </figure></li>
+    </ul>
+  </div>
+</section>
 <section class="sec" id="services">
   <div class="wrap">
     <header class="sec-head">
@@ -462,6 +489,7 @@ var A=ADV,$=A.$,$$=A.$$,inr=A.inr,waLink=A.waLink,copyText=A.copyText,STAGES=A.S
 
 var S=A.clean(A.load());
 var planSel=S.pkg;
+var INTERIOR_HTML='<div class="ip-grid ip-grid-home"><article class="ip-card"><h3>Essential</h3><p class="ip-blurb">Cost-conscious interiors with quality materials.</p><div class="ip-rate">₹950<small>/sq.ft. onwards</small></div><ul class="ip-list"><li>MR-Grade Plywood</li><li>Standard Hardware</li><li>Standard Laminates</li></ul><a class="btn btn-primary ip-btn" href="interior-design.html#essential">View full specs →</a></article><article class="ip-card"><h3>Premium</h3><p class="ip-blurb">Enhanced materials and finishes for modern homes.</p><div class="ip-rate">₹1,200<small>/sq.ft. onwards</small></div><ul class="ip-list"><li>BWP-Grade Plywood</li><li>Premium Hardware</li><li>2mm Edge Banding</li></ul><a class="btn btn-primary ip-btn" href="interior-design.html#premium-mid">View full specs →</a></article><article class="ip-card ip-dark"><span class="ip-tag">Luxury</span><h3>Luxury</h3><p class="ip-blurb">Premium materials and branded fittings, built to impress.</p><div class="ip-rate">₹1,550<small>/sq.ft. onwards</small></div><ul class="ip-list"><li>18mm BWP-Grade Plywood</li><li>Branded Hardware</li><li>Premium Finishes</li></ul><a class="btn btn-ghost ip-btn" href="interior-design.html#luxury">View full specs →</a></article></div><p class="ip-note">Interior design packages. Pricing indicative. Final quote depends on scope, site conditions, and specifications.</p>';
 /* ---------- plan tabs ---------- */
 var tabsEl=$('#plan-tabs'),panelEl=$('#plan-panel');
 function buildTabs(){
@@ -478,10 +506,14 @@ function buildTabs(){
     });
     tabsEl.appendChild(b);
   });
+  var ib=document.createElement('button');ib.type='button';ib.className='plan-tab';ib.id='tab-interior';ib.setAttribute('role','tab');ib.setAttribute('aria-controls','plan-panel');ib.textContent='Interior design';ib.addEventListener('click',function(){setPlan('interior')});tabsEl.appendChild(ib);
 }
 function renderPlan(){
-  var p=PLANS[planSel];
   ORDER.forEach(function(k){var b=$('#tab-'+k);b.setAttribute('aria-selected',k===planSel?'true':'false');b.tabIndex=k===planSel?0:-1});
+  var it=$('#tab-interior');it.setAttribute('aria-selected',planSel==='interior'?'true':'false');it.tabIndex=planSel==='interior'?0:-1;
+  if(planSel==='interior'){panelEl.className='plan-panel plan-panel-wide';panelEl.setAttribute('aria-labelledby','tab-interior');panelEl.innerHTML=INTERIOR_HTML;return;}
+  panelEl.className='plan-panel';
+  var p=PLANS[planSel];
   panelEl.setAttribute('aria-labelledby','tab-'+planSel);
   var rate=(p.rate?'':'<span class="from">From</span>')+'₹'+inr(p.rate||p.from)+'<small>/ sqft</small>';
   var cta=p.rate?'<a class="btn btn-primary" href="#estimate">Estimate with this package</a>':'<a class="btn btn-primary" href="#contact">Request a custom quote</a>';
@@ -489,7 +521,7 @@ function renderPlan(){
 }
 function setPlan(k){
   planSel=k;
-  if(PLANS[k].rate){S.pkg=k;A.syncChips('pkg',k);renderEst()}
+  if(PLANS[k]&&PLANS[k].rate){S.pkg=k;A.syncChips('pkg',k);renderEst()}
   renderPlan();
 }
 /* ---------- estimator ---------- */
